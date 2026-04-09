@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossos Restaurantes | VeggieFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 VeggieFinder</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                <li><a href="restaurantes.html" class="active">Restaurantes</a></li>
+                <li><a href="carrinho.html">🛒 Carrinho <span id="cart-counter" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Explorar Restaurantes</h2>
+        <div class="search-container-inner">
+            <input type="text" id="innerSearchInput" onkeyup="filtrarRestaurantes()" placeholder="Filtrar por nome, tipo ou prato...">
+        </div>
+        
+        <div class="grid-restaurantes" id="listaRestaurantes">
+            <!-- Preenchido pelo script.js -->
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

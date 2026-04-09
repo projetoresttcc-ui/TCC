@@ -1,0 +1,176 @@
+/* Estilos da Página de Carrinho */
+.carrinho-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    gap: 20px;
+}
+
+.item-carrinho img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-carrinho .detalhes { flex: 1; }
+
+.btn-remover {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resumo-carrinho {
+    text-align: right;
+    padding: 20px;
+    background: #e8f5e9;
+    border-radius: 10px;
+}
+
+.btn-finalizar {
+    background: #8db600;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-limpar {
+    background: #666;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/* Estilo para as imagens dos cards */
+.card-img {
+    width: 100%;
+    Height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Botão de adicionar ao carrinho */
+.btn-adicionar {
+    width: 100%;
+    background-color: #2d5a27;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #8db600;
+}
+
+/* Contador do carrinho na nav */
+
+.cart-count {
+    background: #ffcc00;
+    color: #2d5a27;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Configurações Gerais */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f8faf8; color: #333; line-height: 1.6; }
+
+/* Navegação */
+header { background: #2d5a27; color: white; padding: 1rem 5%; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: bold; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 25px; }
+nav ul li a { color: #d1d1d1; text-decoration: none; font-weight: 500; transition: 0.3s; }
+nav ul li a:hover, nav ul li a.active { color: #8db600; }
+
+/* Seção Hero (Home) */
+.hero { 
+    height: 70vh; 
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1350&q=80') center/cover; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center; 
+    color: white; text-align: center; padding: 0 20px; 
+}
+.hero h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
+/* Containers de Busca */
+.search-container { display: flex; width: 100%; max-width: 550px; background: white; border-radius: 30px; overflow: hidden; padding: 5px; }
+.search-container input { flex: 1; border: none; padding: 15px 20px; outline: none; font-size: 1rem; }
+.search-container button { padding: 0 25px; border: none; background: #8db600; color: white; cursor: pointer; border-radius: 25px; font-weight: bold; transition: 0.3s; }
+.search-container button:hover { background: #769900; }
+
+.search-container-inner { margin: 20px auto 40px; text-align: center; }
+.search-container-inner input { width: 100%; max-width: 400px; padding: 12px 20px; border: 2px solid #ddd; border-radius: 25px; outline: none; transition: 0.3s; }
+.search-container-inner input:focus { border-color: #8db600; }
+
+/* Cards e Grid */
+section { padding: 60px 8%; }
+h2 { margin-bottom: 30px; color: #2d5a27; font-size: 2rem; }
+.grid-restaurantes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; border-top: 5px solid #8db600; }
+.card:hover { transform: translateY(-8px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+/* Sistema de Estrelas */
+.rating-box { display: flex; align-items: center; margin: 15px 0 5px; gap: 10px; }
+.nota-numero { font-weight: bold; color: #2d5a27; font-size: 1.1rem; }
+.rating-stars { display: flex; flex-direction: row-reverse; } /* Invertido para o seletor ~ funcionar */
+.star { font-size: 1.4rem; color: #ddd; cursor: pointer; transition: 0.2s; }
+.star:hover, .star:hover ~ .star { color: #ffcc00; }
+
+.tag { display: inline-block; background: #e8f5e9; color: #2d5a27; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; }
+.votos-count { font-size: 0.8rem; color: #888; }
+
+/* Estilo Cardápio do Dia */
+.card-destaque { background: white; padding: 40px; border-radius: 20px; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+.card-destaque h3 { font-size: 1.8rem; margin: 15px 0; color: #2d5a27; }
+.descricao { font-style: italic; color: #666; margin-bottom: 20px; }
+.preco { font-size: 2rem; color: #8db600; font-weight: bold; margin-top: 20px; }
+.card-destaque img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-destaque button {
+    width: 100%;
+    margin-top: 10px;
+}
+/* Responsividade */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2rem; }
+    nav { flex-direction: column; gap: 15px; }
+    nav ul li { margin: 0 10px; }
+    
+}

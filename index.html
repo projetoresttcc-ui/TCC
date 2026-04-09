@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeggieFinder | Sabores à Base de Plantas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">🌿 VeggieFinder</div>
+            <ul>
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                <li><a href="restaurantes.html">Restaurantes</a></li>
+                <li><a href="carrinho.html">🛒 Carrinho <span id="cart-counter" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Encontre o melhor da culinária vegetal</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Busque por prato ou restaurante...">
+            <button onclick="buscar()">Pesquisar</button>
+        </div>
+    </section>
+
+    <section id="cardapio">
+        <h2>✨ Destaque: Cardápio do Dia</h2>
+        <div class="card-dia" id="pratoDestaque">
+            <!-- Preenchido pelo script.js -->
+        </div>
+    </section>
+
+    <section id="restaurantes">
+        <h2>Restaurantes Parceiros</h2>
+        <div class="grid-restaurantes" id="listaRestaurantes">
+            <!-- Preenchido pelo script.js -->
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

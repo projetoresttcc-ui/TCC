@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Carrinho | VeggieFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 VeggieFinder</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                <li><a href="restaurantes.html">Restaurantes</a></li>
+                <li><a href="carrinho.html" class="active">🛒 Carrinho <span id="cart-counter" class="cart-count">0</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="meu-carrinho">
+        <h2>Seu Pedido</h2>
+        
+        <div id="lista-carrinho" class="carrinho-container">
+            </div>
+
+        <div class="resumo-carrinho">
+            <p>Total do Pedido: <strong id="valor-total">R$ 0,00</strong></p>
+            <button class="btn-finalizar" onclick="finalizarPedido()">Finalizar Pedido</button>
+            <button class="btn-limpar" onclick="limparCarrinho()">Limpar Carrinho</button>
+        </div>
+
+        <div id="checkout-container" style="display: none; background: white; padding: 20px; border-radius: 15px; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <h3>Dados para Entrega</h3>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                <input type="text" id="nome" placeholder="Seu Nome" style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                <input type="text" id="endereco" placeholder="Seu Endereço" style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                <select id="pagamento" style="padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+                    <option value="pix">PIX</option>
+                    <option value="dinheiro">Dinheiro</option>
+                </select>
+                <button onclick="confirmarPedido()" style="background: #8db600; color: white; border: none; padding: 15px; border-radius: 10px; cursor: pointer; font-weight: bold;">CONFIRMAR PEDIDO</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
