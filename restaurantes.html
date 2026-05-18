@@ -17,12 +17,28 @@
             </ul>
         </nav>
     </header>
-
+    
     <section>
         <h2>Explorar Restaurantes</h2>
-        <div class="search-container-inner">
-            <input type="text" id="innerSearchInput" onkeyup="filtrarRestaurantes()" placeholder="Filtrar por nome, tipo ou prato...">
-        </div>
+   <div class="search-filter-wrapper">
+    <div class="custom-dropdown" id="dropdownFiltro">
+        <button class="dropdown-btn" onclick="toggleDropdown()">
+            <div class="filter-icon">
+                <span></span><span></span><span></span>
+            </div>
+            <span id="selectedOption">Todos</span>
+        </button>
+        <ul class="dropdown-list">
+            <li onclick="selecionarFiltro('Todos')">Todos</li>
+            <li onclick="selecionarFiltro('Vegano')">Vegano</li>
+            <li onclick="selecionarFiltro('Vegetariano')">Vegetariano</li>
+        </ul>
+    </div>
+    
+    <div class="search-container-inner">
+        <input type="text" id="innerSearchInput" onkeyup="filtrarRestaurantes()" placeholder="Busque prato ou restaurante...">
+    </div>
+</div>
         
         <div class="grid-restaurantes" id="listaRestaurantes">
             <!-- Preenchido pelo script.js -->
